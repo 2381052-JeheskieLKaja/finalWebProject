@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@100..900&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/c9d7afd8e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/images/01_Logo_Galasin-transp.png"
+    />
+    <title>Galasin</title>
+  </head>
+  <body class="font-Raleway">
+    <!-- Header -->
+    <div
+      class="flex items-center justify-end bg-[#222222] text-gray-300 py-2 px-4 md:px-32"
+    >
+      <div class="flex items-center">
+        <a
+          href="#"
+          class="flex items-center pr-4 border-r border-gray-600 mr-6"
+        >
+          <i class="bx bxs-user text-lg"></i>
+          <span class="ml-2">Create Account</span>
+        </a>
+        <a href="#" class="flex items-center">
+          <i class="bx bxs-lock text-lg"></i>
+          <span class="ml-2">Login</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="flex items-center py-6 px-4 md:px-40">
+      <a href="index.html" class="mr-10">
+        <img
+          src="src/images/000_Logo_galasin-webfront_(1).png"
+          alt="Logo Galasin"
+          class="w-24 md:w-50"
+        />
+      </a>
+      <ul class="flex justify-center mx-auto space-x-4 md:space-x-8">
+        <li>
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-orange-500 transition"
+            >Featured</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-orange-500 transition"
+            >Event</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html"
+            class="text-gray-600 hover:text-orange-500 transition"
+            >News</a
+          >
+        </li>
+        <li>
+          <a
+            href="freepage.html"
+            class="text-gray-600 hover:text-orange-500 transition"
+            >Free Page</a
+          >
+        </li>
+        <li>
+          <a
+            href="biodata.html"
+            class="text-gray-600 hover:text-orange-500 transition"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact_us.html"
+            class="text-gray-600 hover:text-orange-500 transition"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Form -->
+        <div class="flex flex-col w-[500px] justify-center bg-[#eee] shadow-[0_0_15px_rgb(53,53,53)] mx-auto my-0 p-[25px] rounded-[5px]">
+            <h2>Contact Us</h2>
+            <form action="/submit-form" method="POST">
+                <div class="form-group">
+                    <label for="first-name">Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="family-name">Family Name</label>
+                    <input type="text" id="family-name" name="family-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Birthdate</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="religion">Religion</label>
+                    <select id="religion" name="religion">
+                        <option value="christian">Christian</option>
+                        <option value="islam">Islam</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="buddhist">Buddhist</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Hobbies</label>
+                    <div class="hobbies">
+                        <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+                        <label for="hobby1">Reading</label>
+                        <input type="checkbox" id="hobby2" name="hobbies" value="sports">
+                        <label for="hobby2">Sports</label>
+                        <input type="checkbox" id="hobby3" name="hobbies" value="music">
+                        <label for="hobby3">Music</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Save</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+      <div class="footer-top">
+        <img src="01_Logo_Galasin-transp.png" alt="Galasin">
+        <a class="list-footer1" href="https://fti.unai.edu/">FTI UNAI</a>
+        <a class="list-footer2" href="https://unai.edu/">UNAI</a>
+        <a class="list-footer3" href="https://jurnal.unai.edu/index.php/teika">Jurnal Telka</a>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-container">
+            <p>© Galasin 2020. All Rights Reserved.</p>
+            <div class="footer-bottom-logo">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
