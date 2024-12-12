@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Posts</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-100">
+
+        <div class="container mx-auto my-10">
+            <h1 class="text-3xl font-bold text-center mb-6">Posts</h1>
+            <div id="posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+
+        <script>
+            const nim = 'xx'; // Replace 'xx' with the last two digits of your NIM
+            const url = `https://jsonplaceholder.typicode.com/posts/52`;
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const postsContainer = document.getElementById('posts');
+                    const postCard = `
+                        <div class="bg-white shadow-md rounded-lg p-4">
+                            <h2 class="text-xl font-semibold text-gray-800">Post ID: ${data.id}</h2>
+                            <h3 class="text-lg font-bold text-gray-700 mt-2">${data.title}</h3>
+                            <p class="text-gray-600 mt-2">${data.body}</p>
+                        </div>
+                    `;
+                    postsContainer.innerHTML = postCard;
+                })
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+        </script>
+
+    </body>
+    </html>
